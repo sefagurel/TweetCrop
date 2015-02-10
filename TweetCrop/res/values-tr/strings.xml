@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TweetCrop</string>
+    <string name="hello_world">Merhaba Dünya!</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="internet_connection">İnternet Bağlantısı</string>
+    <string name="valid_connection">Geçerli bir internet bağlantısı kurulamıyor</string>
+    <string name="twitter_oauth_infos">Twitter oAuth bilgileri</string>
+    <string name="set_consumer">Lütfen twitter consumer key ve consumer secret değerlerini giriniz</string>
+    <string name="enter_status">Durumunuzu güncelleyin</string>
+    <string name="welcome">Hoşgeldin</string>
+    <string name="tweet_successfully">Tweet gönderildi</string>
+    <string name="tweet_failed">Tweet gönderilemedi</string>
+    <string name="error_long_text">Bu çok uzun bir yazı!</string>
+    <string name="logout">Çıkış Yap</string>
+    <string name="send_tweet">Tweet Gönder</string>
+    <string name="login_with_twitter">Twitter ile giriş yap</string>
+    <string name="action_logout">Çıkış yap</string>
+
+</resources>
