@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.sefagurel.tweetcrop.helpers;
+package com.sefagurel.tweetlonger.helpers;
 
 import java.util.LinkedList;
 import java.util.Queue;

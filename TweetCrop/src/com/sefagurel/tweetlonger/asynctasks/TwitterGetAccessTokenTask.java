@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop.asynctasks;
+package com.sefagurel.tweetlonger.asynctasks;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -12,9 +12,9 @@ import android.text.Html;
 import android.widget.TextView;
 
 import com.hintdesk.core.util.StringUtil;
-import com.sefagurel.tweetcrop.R;
-import com.sefagurel.tweetcrop.utils.ConstantValues;
-import com.sefagurel.tweetcrop.utils.TwitterUtil;
+import com.sefagurel.tweetlonger.R;
+import com.sefagurel.tweetlonger.utils.ConstantValues;
+import com.sefagurel.tweetlonger.utils.TwitterUtil;
 
 public class TwitterGetAccessTokenTask extends AsyncTask<String, String, String> {
 

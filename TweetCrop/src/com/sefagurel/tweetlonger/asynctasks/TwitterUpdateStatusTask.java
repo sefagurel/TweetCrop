@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop.asynctasks;
+package com.sefagurel.tweetlonger.asynctasks;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import com.hintdesk.core.util.StringUtil;
-import com.sefagurel.tweetcrop.R;
-import com.sefagurel.tweetcrop.utils.ConstantValues;
-import com.sefagurel.tweetcrop.utils.CutString;
-import com.sefagurel.tweetcrop.utils.TwitterUtil;
+import com.sefagurel.tweetlonger.R;
+import com.sefagurel.tweetlonger.utils.ConstantValues;
+import com.sefagurel.tweetlonger.utils.CutString;
+import com.sefagurel.tweetlonger.utils.TwitterUtil;
 
 public class TwitterUpdateStatusTask extends AsyncTask<String, String, Boolean> {
 

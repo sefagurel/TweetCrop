@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop;
+package com.sefagurel.tweetlonger;
 
 import android.content.Intent;
 import android.net.Uri;

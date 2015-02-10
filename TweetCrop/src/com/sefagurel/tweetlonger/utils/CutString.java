@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop.utils;
+package com.sefagurel.tweetlonger.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import android.app.Activity;
 
-import com.sefagurel.tweetcrop.R;
+import com.sefagurel.tweetlonger.R;
 
 /**
  * @author Sefa Gürel

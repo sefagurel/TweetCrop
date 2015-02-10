@@ -4,12 +4,6 @@
     tools:context="com.sefagurel.tweetcrop.MainActivity" >
 
     <item
-        android:id="@+id/action_settings"
-        android:icon="@drawable/icon_settings2"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="always"/>
-    <item
         android:id="@+id/action_logout"
         android:icon="@drawable/icon_logout2"
         android:orderInCategory="100"

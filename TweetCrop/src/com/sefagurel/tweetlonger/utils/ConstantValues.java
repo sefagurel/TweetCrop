@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop.utils;
+package com.sefagurel.tweetlonger.utils;
 
 public class ConstantValues {
 
@@ -8,7 +8,7 @@ public class ConstantValues {
 
 	public static String	TWITTER_CONSUMER_SECRET					= "faBZsKQGx81nECIAkjzweNpO2l0Ba4oyYrYETXr1ENt9YGgBCv";
 
-	public static String	TWITTER_CALLBACK_URL					= "oauth://com.sefagurel.tweetcrop";
+	public static String	TWITTER_CALLBACK_URL					= "oauth://com.sefagurel.tweetlonger";
 
 	public static String	URL_PARAMETER_TWITTER_OAUTH_VERIFIER	= "oauth_verifier";
 

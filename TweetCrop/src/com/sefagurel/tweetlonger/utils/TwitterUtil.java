@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop.utils;
+package com.sefagurel.tweetlonger.utils;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;

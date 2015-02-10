@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TweetCrop</string>
+    <string name="app_name">Uzun Tweet</string>
     <string name="hello_world">Merhaba Dünya!</string>
     <string name="action_settings">Ayarlar</string>
     <string name="internet_connection">İnternet Bağlantısı</string>

@@ -1,6 +1,6 @@
-package com.sefagurel.tweetcrop;
+package com.sefagurel.tweetlonger;
 
-import com.sefagurel.tweetcrop.utils.ConstantValues;
+import com.sefagurel.tweetlonger.utils.ConstantValues;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;

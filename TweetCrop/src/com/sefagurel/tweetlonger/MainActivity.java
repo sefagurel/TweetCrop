@@ -1,10 +1,10 @@
-package com.sefagurel.tweetcrop;
+package com.sefagurel.tweetlonger;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,10 +14,10 @@ import android.widget.Button;
 import com.hintdesk.core.activities.AlertMessageBox;
 import com.hintdesk.core.util.OSUtil;
 import com.hintdesk.core.util.StringUtil;
-import com.sefagurel.tweetcrop.asynctasks.TwitterAuthenticateTask;
-import com.sefagurel.tweetcrop.utils.ConstantValues;
+import com.sefagurel.tweetlonger.asynctasks.TwitterAuthenticateTask;
+import com.sefagurel.tweetlonger.utils.ConstantValues;
 
-public class MainActivity extends ActionBarActivity implements OnClickListener {
+public class MainActivity extends Activity implements OnClickListener {
 
 	private Button	buttonLogin;
 	private boolean	isUseStoredTokenKey	= false;
@@ -75,9 +75,9 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
+		// if (id == R.id.action_settings) {
+		// return true;
+		// }
 
 		return super.onOptionsItemSelected(item);
 	}

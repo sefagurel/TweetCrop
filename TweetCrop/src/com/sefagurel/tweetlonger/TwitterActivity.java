@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop;
+package com.sefagurel.tweetlonger;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,17 +19,17 @@ import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hintdesk.core.util.StringUtil;
-import com.sefagurel.tweetcrop.asynctasks.TwitterGetAccessTokenTask;
-import com.sefagurel.tweetcrop.asynctasks.TwitterUpdateStatusTask;
-import com.sefagurel.tweetcrop.helpers.SlideHolder;
-import com.sefagurel.tweetcrop.utils.ConstantValues;
-import com.sefagurel.tweetcrop.utils.TwitterUtil;
-import com.squareup.picasso.Picasso;
+import com.sefagurel.tweetlonger.asynctasks.TwitterGetAccessTokenTask;
+import com.sefagurel.tweetlonger.asynctasks.TwitterUpdateStatusTask;
+import com.sefagurel.tweetlonger.helpers.SlideHolder;
+import com.sefagurel.tweetlonger.utils.ConstantValues;
+import com.sefagurel.tweetlonger.utils.TwitterUtil;
+import com.startapp.android.publish.StartAppAd;
+import com.startapp.android.publish.StartAppSDK;
 
 public class TwitterActivity extends ActionBarActivity implements OnClickListener, TextWatcher {
 
@@ -37,15 +37,18 @@ public class TwitterActivity extends ActionBarActivity implements OnClickListene
 
 	EditText			editTextStatus;
 	TextView			tvTextCounter;
-	ImageView			img_profile_picture;
-	WebView				wv_twitter;
+	private StartAppAd	startAppAd;
+
+	// ImageView img_profile_picture;
+	// WebView wv_twitter;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		StartAppSDK.init(this, "110650218", "202265412", true);
 
 		ActionBar ab = getSupportActionBar();
-		ab.setHomeButtonEnabled(true);
-		ab.setDisplayHomeAsUpEnabled(true);
+		// ab.setHomeButtonEnabled(true);
+		// ab.setDisplayHomeAsUpEnabled(true);
 
 		Drawable d = getResources().getDrawable(R.drawable.back8);
 
@@ -56,20 +59,28 @@ public class TwitterActivity extends ActionBarActivity implements OnClickListene
 
 		setContentView(R.layout.main2);
 
-		mSlideHolder = (SlideHolder) findViewById(R.id.slideHolder);
+		startAppAd = new StartAppAd(this);
+
+		// Banner banner = (com.startapp.android.publish.banner.Banner) findViewById(R.id.startAppBanner);
+		// banner.showBanner();
+
+		startAppAd.showAd();
+		startAppAd.loadAd();
+
+		// mSlideHolder = (SlideHolder) findViewById(R.id.slideHolder);
 
 		editTextStatus = (EditText) findViewById(R.id.editTextStatus);
 		tvTextCounter = (TextView) findViewById(R.id.tv_text_counter);
-		img_profile_picture = (ImageView) findViewById(R.id.img_profile_picture);
+		// img_profile_picture = (ImageView) findViewById(R.id.img_profile_picture);
 
-		wv_twitter = (WebView) findViewById(R.id.webView1);
-		wv_twitter.getSettings().setJavaScriptEnabled(true);
-		wv_twitter.setWebViewClient(new MyBrowser());
-		wv_twitter.getSettings().setLoadsImagesAutomatically(true); 
-		wv_twitter.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-		wv_twitter.loadUrl("http://www.twitter.com");
+		// wv_twitter = (WebView) findViewById(R.id.webView1);
+		// wv_twitter.getSettings().setJavaScriptEnabled(true);
+		// wv_twitter.setWebViewClient(new MyBrowser());
+		// wv_twitter.getSettings().setLoadsImagesAutomatically(true);
+		// wv_twitter.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+		// wv_twitter.loadUrl("http://www.twitter.com");
 
-		Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").into(img_profile_picture);
+		// Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").into(img_profile_picture);
 
 		editTextStatus.addTextChangedListener(this);
 
@@ -84,8 +95,6 @@ public class TwitterActivity extends ActionBarActivity implements OnClickListene
 		}
 
 	}
-
- 
 
 	private class MyBrowser extends WebViewClient {
 		@Override
@@ -125,10 +134,7 @@ public class TwitterActivity extends ActionBarActivity implements OnClickListene
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		else if (id == android.R.id.home) {
+		if (id == android.R.id.home) {
 			View view = this.getCurrentFocus();
 			if (view != null) {
 				InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -156,7 +162,27 @@ public class TwitterActivity extends ActionBarActivity implements OnClickListene
 			else {
 				Toast.makeText(getApplicationContext(), R.string.enter_status, Toast.LENGTH_SHORT).show();
 			}
+			editTextStatus.setText("");
+
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		startAppAd.onResume();
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		startAppAd.onPause();
+	}
+
+	@Override
+	public void onBackPressed() {
+		startAppAd.onBackPressed();
+		super.onBackPressed();
 	}
 }

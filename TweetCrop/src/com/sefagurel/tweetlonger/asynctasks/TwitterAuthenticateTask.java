@@ -1,4 +1,4 @@
-package com.sefagurel.tweetcrop.asynctasks;
+package com.sefagurel.tweetlonger.asynctasks;
 
 import twitter4j.auth.RequestToken;
 import android.app.Activity;
@@ -6,9 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 
-import com.sefagurel.tweetcrop.OAuthActivity;
-import com.sefagurel.tweetcrop.utils.ConstantValues;
-import com.sefagurel.tweetcrop.utils.TwitterUtil;
+import com.sefagurel.tweetlonger.OAuthActivity;
+import com.sefagurel.tweetlonger.utils.ConstantValues;
+import com.sefagurel.tweetlonger.utils.TwitterUtil;
 
 public class TwitterAuthenticateTask extends AsyncTask<String, String, RequestToken> {
 
